@@ -1,11 +1,32 @@
 <html lang="ja">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>kitunetaro</title>
-  </head>
-  <body>
-    <h1>なにこれ</h1>
-    <img src="https://cdn.discordapp.com/attachments/931133152473260035/1263013464910073856/kituneirasuto.png?ex=6698b073&is=66975ef3&hm=214678e47a028689a7736b7acf7925722372add23c8e889e2a6d4311ac8d12e7&" alt="きつね太郎の顔" />
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クリックカウント</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        #countDisplay {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="countDisplay">クリック数: 0</div>
+    <script>
+        let count = 0;
+
+        document.body.addEventListener('click', () => {
+            count++;
+            document.getElementById('countDisplay').textContent = `クリック数: ${count}`;
+        });
+    </script>
+</body>
 </html>
